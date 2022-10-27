@@ -1,0 +1,127 @@
+body{
+    margin: 0;
+    font-family: 'Raleway', sans-serif;
+}
+/* common styles */
+.common-btn{
+    background-color: #000000;
+    color: #ffffff;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+/* Homepage styles */
+.home-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #E0CABC;
+}
+.home-img{
+    width: 576px;
+    height: 653px;
+}
+.home-content{
+    text-align: center;
+}
+.home-content h1{
+    font-family: 'Rosario', sans-serif;
+}
+.test-start{
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 20px;
+    box-shadow: 0px 4px 70px rgba(0, 0, 0, 0.1);
+}
+.test-start p{
+    font-size: 14px;
+}
+.test-start button{
+    padding: 10px 90px;
+}
+/* Question page styles */
+.question-container{
+    display: none;
+    background-color: #B0B8FF;
+    text-align: center;
+}
+.remaining-time{
+    display: flex;
+    justify-content: center;
+    padding: 50px 0;
+}
+.time-container{
+    width: 473px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #ffffff;
+    border-radius: 15px;
+    padding: 15px 20px;
+}
+.time-container h3{
+    margin: 0;
+}
+.time-container button{
+    padding: 5px 30px;
+}
+/* Result page styles */
+.result-container{
+    height: 100vh;
+    display: none;
+    background: linear-gradient(269.85deg, #FFDF64 0.12%, #F4D456 99.86%);
+}
+.mcq-result{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.result{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    box-shadow: 0px 4px 60px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    padding: 20px;
+}
+.result h2{
+    margin: 0;
+}
+.result p{
+    margin-top: 0;
+    font-size: 14px;
+}
+.result button{
+    padding: 10px 50px;
+}
+/* Timeout page styles */
+.timeout-container{
+    height: 100vh;
+    display: none;
+    background: linear-gradient(269.85deg, #FF646D 0.12%, #F45656 99.86%);
+}
+.timeout{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.timeout-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    box-shadow: 0px 4px 60px rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    padding: 20px;
+}
+.timeout-container h2{
+    text-transform: uppercase;
+}
+.timeout-content button{
+    padding: 10px 50px;
+}

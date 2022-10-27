@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- custom stylesheet -->
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- google fonts link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700;800;900&family=Rosario:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <title>Take Home</title>
+</head>
+<body>
+    <!-- Homepage starts -->
+    <div id="home-container" class="home-container">
+        <div>
+            <img class="home-img" src="./images/showcase.png" alt="">
+        </div>
+        <div class="home-content">
+            <h1>MCQ Test</h1>
+            <div class="test-start">
+                <h3>Total Questions 10 In 10 Minute</h3>
+                <p>MCQ about Tense (English 2nd paper)</p>
+                <button class="common-btn" onclick="loadQuestions()">Start</button>
+            </div>
+        </div>
+    </div>
+    <!-- Question starts -->
+    <div id="question-container" class="question-container">
+        <div class="remaining-time">
+        <div class="time-container">
+            <h3>Remaining Time: 00:10:00</h3>
+            <button class="common-btn" onclick="getResult()">Finish</button>
+        </div>
+    </div>
+        <div>
+
+        </div>
+    </div>
+    <!-- Result starts -->
+    <div id="result-container" class="result-container">
+        <div class="mcq-result">
+        <div class="result">
+            <img src="./images/congrats.png" alt="">
+            <h2>MCQ Result</h2>
+            <p>You Got 7 Score</p>
+            <button class="common-btn">Start again</button>
+        </div>
+    </div>
+    </div>
+    <!-- Timeout starts -->
+    <div id="timeout-container" class="timeout-container">
+        <div class="timeout">
+        <div class="timeout-content">
+            <img src="./images/stopwatch.png" alt="">
+            <h2>Time Out</h2>
+            <button class="common-btn">Start again</button>
+        </div>
+    </div>
+    </div>
+
+    <!-- javascript file -->
+    <script src="./js/app.js"></script>
+</body>
+</html>

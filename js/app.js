@@ -2,6 +2,8 @@ const homeContainer = document.getElementById("home-container");
 const questionContainer = document.getElementById("question-container");
 const resultContainer = document.getElementById("result-container");
 const timeoutContainer = document.getElementById("timeout-container");
+var count = 0;
+
 const loadQuestions = () => {
   homeContainer.style.display = "none";
   questionContainer.style.display = "block";
@@ -11,6 +13,7 @@ const loadQuestions = () => {
     .then((data) => showQuestions(data));
   showTimer();
 };
+
 const showQuestions = (ques) => {
   const allQues = ques.map((qs) => qs);
   for (let i = 0; i < allQues.length; i++) {
@@ -18,12 +21,14 @@ const showQuestions = (ques) => {
     div.classList.add("ques-container");
     div.innerHTML = `<div class="ques">
       <h3>${i + 1}. ${allQues[i].title}</h3>
-      ${allQues[i].options.map(
-        (opt) => `
-      <input class="options" data-Index="${i}" id=${opt} type="radio" name='option${i}' value=${opt}>
-      <label for=${opt}>${opt}</label> <br>
+      ${allQues[i].options
+        .map(
+          (opt) => `
+      <input class="options" data-Index="${i}" type="radio" name='option${i}' value="${opt}" id="${allQues[i].answer}">
+      <label for=${opt}>${opt}</label><br/>
       `
-      )}
+        )
+        .join("\n")}
       </div>
       `;
     document.getElementById("all-ques").appendChild(div);
@@ -54,22 +59,39 @@ const showTimer = () => {
         timeUp();
       }
     }
-    updateClock(); 
+    updateClock();
     let timeinterval = setInterval(updateClock, 1000);
   }
   runClock("timer-container", deadline);
 };
+
+//show Result
+const showResult = () => {
+  const resultEl = document.getElementById("result");
+  const inputList = document.getElementsByTagName("input");
+
+  for (let i = 0; i < inputList.length; i++) {
+    if (inputList[i].type == "radio" && inputList[i].checked) {
+      if (inputList[i].id === inputList[i].value) {
+        count += 1;
+      }
+    }
+  }
+  resultEl.innerText = "You Got " + count + " Score";
+};
+
 const timeUp = () => {
   homeContainer.style.display = "none";
   questionContainer.style.display = "none";
   resultContainer.style.display = "none";
   timeoutContainer.style.display = "block";
 };
-const getResult = (selectedAns) => {
+
+const getResult = () => {
   homeContainer.style.display = "none";
   questionContainer.style.display = "none";
   resultContainer.style.display = "block";
-  let userSolution = selectedAns.value;
+  showResult();
 };
 const startAgain = () => {
   homeContainer.style.display = "flex";

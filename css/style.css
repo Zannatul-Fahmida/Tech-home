@@ -85,6 +85,9 @@ body{
 .ques h3{
     margin: 0 0 10px 0;
 }
+label, .options{
+    cursor: pointer;
+}
 /* Result page styles */
 .result-container{
     height: 100vh;

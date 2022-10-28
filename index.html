@@ -31,11 +31,11 @@
     <div id="question-container" class="question-container">
         <div class="remaining-time">
         <div class="time-container">
-            <h3>Remaining Time: 00:10:00</h3>
+            <h3>Remaining Time: <div id="timer-container" style="display: inline;"></div></h3>
             <button class="common-btn" onclick="getResult()">Finish</button>
         </div>
     </div>
-        <div>
+        <div id="all-ques" class="all-ques">
 
         </div>
     </div>
@@ -46,7 +46,7 @@
             <img src="./images/congrats.png" alt="">
             <h2>MCQ Result</h2>
             <p>You Got 7 Score</p>
-            <button class="common-btn">Start again</button>
+            <button class="common-btn" onclick="startAgain()">Start again</button>
         </div>
     </div>
     </div>
@@ -56,7 +56,7 @@
         <div class="timeout-content">
             <img src="./images/stopwatch.png" alt="">
             <h2>Time Out</h2>
-            <button class="common-btn">Start again</button>
+            <button class="common-btn" onclick="startAgain()">Start again</button>
         </div>
     </div>
     </div>

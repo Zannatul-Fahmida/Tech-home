@@ -1,4 +1,4 @@
-const questions =[
+[
     {
       "title": "What is the past form of 'eat'?",
       "options": ["eat", "ate", "eaten", "have ate"],

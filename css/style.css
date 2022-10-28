@@ -44,11 +44,12 @@ body{
     display: none;
     background-color: #B0B8FF;
     text-align: center;
+    padding: 50px 0;
 }
 .remaining-time{
     display: flex;
     justify-content: center;
-    padding: 50px 0;
+    margin: 0 0 10px 0;
 }
 .time-container{
     width: 473px;
@@ -64,6 +65,25 @@ body{
 }
 .time-container button{
     padding: 5px 30px;
+}
+.all-ques{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+}
+.ques-container{
+    margin: 10px 0;
+}
+.ques{
+    background-color: #ffffff;
+    width: 473px;
+    text-align: start;
+    padding: 20px;
+    border-radius: 15px;
+}
+.ques h3{
+    margin: 0 0 10px 0;
 }
 /* Result page styles */
 .result-container{
